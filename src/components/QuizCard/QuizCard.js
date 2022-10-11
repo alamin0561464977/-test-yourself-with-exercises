@@ -6,7 +6,7 @@ const QuizCard = ({ quiz }) => {
     console.log(quiz)
     return (
         <div className=''>
-            <div className="card card-compact w-auto bg-base-100 shadow-xl">
+            <div className="card card-compact w-auto bg-slate-300 shadow-xl">
                 <img className='h-80' src={logo} alt="Shoes" />
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
