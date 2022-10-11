@@ -2,23 +2,36 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import Option from '../Option/Option';
 import "react-toastify/dist/ReactToastify.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
 
 const Question = ({ questions }) => {
-    const [correctAnswers, setCorrectAnswers] = useState(localStorage.getItem('correctAnswers') ? localStorage.getItem('correctAnswers') : 0);
-    const [unCorrectAnswers, setAnCorrectAnswers] = useState(localStorage.getItem('anCorrectAnswers') ? localStorage.getItem('anCorrectAnswers') : 0);
     const { question, options, correctAnswer } = questions;
+    const storCorrectAnswers = localStorage.getItem('correctAnswers');
+    const storUnCorrectAnswers = localStorage.getItem('anCorrectAnswers');
+    const [correctAnswers, setCorrectAnswers] = useState(storCorrectAnswers ? storCorrectAnswers : 0);
+    const [unCorrectAnswers, setAnCorrectAnswers] = useState(storUnCorrectAnswers ? storUnCorrectAnswers : 0);
+
+
     const btnOption = option => {
         if (option === correctAnswer) {
             setCorrectAnswers(+correctAnswers + 1);
-            toast.success("Default Notification !");
+            toast.success("wow Correct Answers!");
         }
         else {
             setAnCorrectAnswers(+unCorrectAnswers + 1);
-            toast.warn("Warning Notification !")
+            toast.warn("Un Correct Answers !")
         }
-    }
+    };
+
     localStorage.setItem("anCorrectAnswers", unCorrectAnswers);
     localStorage.setItem("correctAnswers", correctAnswers);
+
+    const btnCorrectAnswer = () => {
+        alert(`${correctAnswer}`)
+    };
+
     return (
         <div className='container mx-auto'>
             <div className='p-8 bg-gray-300 mt-8 grid grid-cols-2 text-center font-extrabold'>
@@ -59,9 +72,11 @@ const Question = ({ questions }) => {
                         </span>{' '}
                         {question}
                     </h2>
+                    <FontAwesomeIcon onClick={btnCorrectAnswer} className=' bg-teal-300 p-5 rounded-xl hover:bg-sky-200' icon={faEyeSlash} />
                 </div>
                 <hr />
                 <br />
+                <h1 className='mb-3 text-xl font-bold leading-5'>Option</h1>
                 <div className="grid gap-8 row-gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {
                         options.map(option => <Option
