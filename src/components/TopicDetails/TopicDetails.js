@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Question from '../Question/Question';
 
 const TopicDetails = () => {
-    const quizDetails = useLoaderData().data;
-    console.log(quizDetails)
+    const questions = useLoaderData().data.questions;
+    const correctAnswers = localStorage.getItem('correctAnswers');
+    const unCorrectAnswers = localStorage.getItem('anCorrectAnswers');
+
     return (
         <div>
-            TopicDetails
+            <div>
+                {
+                    questions.map(question => <Question
+                        key={question.id}
+                        questions={question}
+                    ></Question>)
+                }
+            </div>
         </div>
     );
 };
