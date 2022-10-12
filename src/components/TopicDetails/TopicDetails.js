@@ -4,8 +4,6 @@ import Question from '../Question/Question';
 
 const TopicDetails = () => {
     const questions = useLoaderData().data.questions;
-    const correctAnswers = localStorage.getItem('correctAnswers');
-    const unCorrectAnswers = localStorage.getItem('anCorrectAnswers');
 
     return (
         <div>

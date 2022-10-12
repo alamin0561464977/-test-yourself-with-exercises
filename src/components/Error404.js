@@ -3,7 +3,7 @@ import React from 'react';
 const Error404 = () => {
     return (
         <div className='flex justify-center align-center'>
-            <img className='w-100 h-100' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZYMttzjZW8t1uNwHQnLTd2WxBGzDwg49Jg&usqp=CAU" alt="" />
+            <img className='error' src="https://i.pinimg.com/originals/0b/21/9f/0b219f91b508342ff91c997e16afeca4.gif" alt="" />
         </div>
     );
 };

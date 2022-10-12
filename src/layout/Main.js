@@ -9,7 +9,7 @@ export const QuizContext = createContext([]);
 const Main = () => {
     const quiz = useLoaderData().data;
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto border-x-2'>
             <QuizContext.Provider value={quiz}>
                 <Header></Header>
                 <ToastContainer />
