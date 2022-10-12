@@ -5,7 +5,7 @@ const QuizCard = ({ quiz }) => {
     const { id, name, logo } = quiz;
     console.log(quiz)
     return (
-        <div className=''>
+        <div className=' text-black'>
             <div className="card card-compact w-auto bg-slate-300 shadow-xl">
                 <img className='h-80' src={logo} alt="Shoes" />
                 <div className="card-body">

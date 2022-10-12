@@ -6,8 +6,8 @@ const Chart = () => {
     const data = useContext(QuizContext);
     console.log(data)
     return (
-        <div className=' bg-white '>
-            <LineChart width={600} height={300} data={data}>
+        <div className=' text-white my-8'>
+            <LineChart className=' mx-auto' width={600} height={300} data={data}>
                 <Line type="monotone" dataKey='total' stroke="#8884d8" />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey='name' />
