@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const QuizCard = ({ quiz }) => {
     const { id, name, logo } = quiz;
-    console.log(quiz)
     return (
         <div className=' text-black'>
             <div className="card card-compact w-auto bg-slate-300 shadow-xl">

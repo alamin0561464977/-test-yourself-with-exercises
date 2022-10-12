@@ -4,7 +4,6 @@ import { QuizContext } from '../../layout/Main';
 
 const Chart = () => {
     const data = useContext(QuizContext);
-    console.log(data)
     return (
         <div className=' text-white my-8'>
             <LineChart className=' mx-auto' width={600} height={300} data={data}>
