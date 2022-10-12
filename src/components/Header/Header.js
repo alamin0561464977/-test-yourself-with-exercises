@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -20,9 +20,10 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/quiz'>Quiz</Link></li>
-                        <li><Link to='/blog'>Blog</Link></li>
+                        <li><NavLink className='mx-2' to='/'>Home</NavLink></li>
+                        <li><NavLink className='mx-2' to='/quiz'>Quiz</NavLink></li>
+                        <li><NavLink className='mx-2' to='/chart'>Chart</NavLink></li>
+                        <li><NavLink className='mx-2' to='/blog'>Blog</NavLink></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +39,7 @@ const Header = () => {
                     </svg>
                     <img
                         className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4moCiwp_ltmay9WuflMhPhx0OXUumhpyXHL3anX2eooD3tofTeeSKSogAfRnrvUyOlxg&usqp=CAU"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNoqh-thSVGjhEn_u4cXUhc7YHu5ET9usnQ9EoLmlvDwW3wma80BtSR-Vqb6rT79LU_IU&usqp=CAU"
                         alt=""
                     />
                 </div>
